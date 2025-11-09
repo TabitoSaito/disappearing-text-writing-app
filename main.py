@@ -14,7 +14,6 @@ class Page(tk.Frame):
 
 
 class StartPage(Page):
-
     def __init__(self, root, *args, **kwargs):
         Page.__init__(self, root, *args, **kwargs)
 
@@ -83,7 +82,7 @@ class WritePage(Page):
         self.timer_label.config(text="3")
         self.id_2 = self.after(1000, lambda: self.timer_label.config(text=2))
         self.id_1 = self.after(2000, lambda: self.timer_label.config(text=1))
-        self.id_delete = self.after(3000, lambda: self.text_input.delete('1.0', tk.END))
+        self.id_delete = self.after(3000, lambda: self.text_input.delete("1.0", tk.END))
         self.id_reset_label = self.after(3000, lambda: self.timer_label.config(text=""))
 
     def cancel_timer(self):
